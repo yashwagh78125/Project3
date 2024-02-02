@@ -1,0 +1,29 @@
+<div>
+<form> 
+    Roll Number<input type="text" name="rollno" [(ngModel)]="stud.rollno"><br><br>
+    Student Name<input type="text" name="sname" [(ngModel)]="stud.sname"><br><br>
+    Address<input type="text" name="address" [(ngModel)]="stud.address"><br><br>
+    Male<input type="radio" name="gender"   value="male" [(ngModel)]="stud.gender">
+    Female<input type="radio" name="gender" value="female" [(ngModel)]="stud.gender"><br><br>
+    Mobile Number<input type="text" name="mobno" [(ngModel)]="stud.mobno"><br><br>
+    <input  type="button" value="saveData" (click)="saveData()">
+    <input  type="button" value="getAllData" (click)="getAllData()">
+</form>
+<span style="color:red;">{{message}}</span>
+<table class="table">
+    <tr>
+        <th>Roll No</th>
+        <th>Student Name</th>
+        <th>Address</th>
+        <th>Gender</th>
+        <th>Mobile Number</th>
+    </tr>
+    <tr *ngFor="let stud of studs1">
+        <td>{{stud.rollno}}</td>
+        <td>{{stud.sname|title:stud.gender}}</td>
+        <td>{{stud.address}}</td>
+        <td>{{stud.gender}}</td>
+        <td>{{stud.mobno}}</td>
+    </tr>
+</table>
+</div>

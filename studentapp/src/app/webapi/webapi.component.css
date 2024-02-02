@@ -1,0 +1,23 @@
+table,th,td
+{
+    border:1px solid bisque
+
+}
+
+th,td
+{
+    padding: 15px;
+}
+
+table
+{
+    margin: auto;
+}
+div
+{
+  background-color: cadetblue;
+}
+form
+{
+   background-color: palevioletred;
+}
